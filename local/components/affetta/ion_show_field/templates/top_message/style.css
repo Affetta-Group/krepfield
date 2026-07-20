@@ -1,0 +1,21 @@
+.top-client-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px;
+    background-color: #fff;
+    color: #3e3d3d;
+    font-weight: bold;
+}
+
+.top-client-message__text {
+
+}
+
+@media screen and (max-width: 1500px) {
+    .top-client-message {
+        height: unset;
+        padding: 15px;
+    }
+}

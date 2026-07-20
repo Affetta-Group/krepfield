@@ -1,0 +1,1 @@
+<?require($_SERVER["DOCUMENT_ROOT"]."/local/modules/affettaredirects/admin/affettaredirects_info.php");?>

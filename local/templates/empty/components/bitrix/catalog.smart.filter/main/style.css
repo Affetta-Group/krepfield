@@ -1,0 +1,75 @@
+.filter .bx-ui-slider-track {
+	height: 2px;
+	position: relative;
+	background: #6D6D6D;
+	border-radius: 2px;
+
+}
+
+.filter .bx-ui-slider-handle {
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: -5px;
+	cursor: pointer;
+	background: #F6BC2F;
+	z-index: 2;
+	border-radius: 100px;
+}
+
+.filter .bx-ui-slider-range,
+.filter .bx-ui-slider-pricebar,
+.filter .bx-ui-slider-pricebar-vd,
+.filter .bx-ui-slider-pricebar-vn,
+.filter .bx-ui-slider-pricebar-v {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+.filter .bx-ui-slider-range {
+	z-index: 50;
+}
+
+.filter .bx-ui-slider-pricebar {
+	z-index: 100;
+}
+
+.filter .bx-ui-slider-pricebar-vd {
+	z-index: 60;
+}
+
+.filter .bx-ui-slider-pricebar-vn {
+	z-index: 70;
+}
+
+.filter .bx-ui-slider-pricebar-v {
+	z-index: 80;
+}
+
+.filter .bx-ui-slider-pricebar-vd {
+	background: #6D6D6D;
+	z-index: 0 !important;
+}
+
+.filter .bx-ui-slider-pricebar-vn {
+	background: #6D6D6D;
+	z-index: 0 !important;
+}
+
+.filter .bx-ui-slider-pricebar-v {
+	background: #F6BC2F;
+	z-index: 0 !important;
+}
+
+.bx-filter-param-label.disabled {
+	color: lightgrey;
+}
+
+input[type=checkbox]:not(:checked) + label.disabled:before {
+	background-color: lightgrey;
+}
+
+.filter__check label.disabled:hover:before {
+	border-color: #6D6D6D!important;
+}

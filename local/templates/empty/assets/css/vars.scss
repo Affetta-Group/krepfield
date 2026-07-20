@@ -1,0 +1,34 @@
+@mixin size1330 {
+    @media screen and (max-width: 1330px) {
+        @content;
+    }
+}
+
+@mixin size1200 {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin size992 {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin size768 {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin size576 {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+
+
+
+
+$--base-color: #c6538c;

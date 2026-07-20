@@ -1,0 +1,7 @@
+.affetta-promo__spoiler {
+    display: none;
+}
+
+.affetta-promo__spoiler.active {
+    display: block;
+}

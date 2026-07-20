@@ -1,0 +1,290 @@
+// инфа о промоакции в персональном
+.affetta-personal-status {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #F2F2F2;
+    grid-row-gap: 20px;
+
+    @include size1200 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include size768 {
+        grid-template-columns: 1fr;
+    }
+
+    .affetta-personal-status__item {
+
+        display: grid;
+        grid-template-columns: max-content auto;
+        grid-row-gap: 6px;
+        grid-column-gap: 14px;
+
+        .affetta-personal-status__item-icon {
+            grid-row: 1 / 3;
+
+            svg {
+                width:28px;
+                height:28px;
+                display:block
+            }
+        }
+        .affetta-personal-status__item-label {
+            color: #2C2C2C;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+        .affetta-personal-status__item-value {
+            font-family: Montserrat;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 33px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #2C2C2C;
+        }
+    }
+}
+
+// форма регистрации - авторизации
+.enter {
+
+    .enter__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        @include size992 {
+            grid-template-columns: 1fr;
+        }
+
+        .enter__item {
+            width: unset;
+        }
+
+        .enter__item-no-padding {
+            padding: 0;
+            height: 100%;
+            position:relative;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 53%;
+                left: 0;
+                height:100px;
+                width:100px;
+                /*transform: rotate(90deg);*/
+                background:url("/local/templates/empty/assets/images/Subtract.svg");
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    .enter__row-label-wr {
+        position: relative;
+
+        .enter__row-label {
+            margin: 32px 0;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: #A9AEB2;
+
+            &::after {
+                content:'';
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                background: #A9AEB2;
+                left: 0;
+                top: 50%;
+            }
+
+            .enter__row-label-text {
+                background: white;
+                position: relative;
+                z-index: 5;
+                padding: 0 18px;
+            }
+        }
+    }
+
+    .enter__reg {
+        margin-top: 32px;
+        font-family: Montserrat;
+        font-size: 14px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 10px;
+
+        @include size1330 {
+            flex-direction: column;
+        }
+
+        &.center {
+            display: block;
+            text-align: center;
+        }
+
+        .enter__reg-link {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .enter__reg-label{
+            color: #A9AEB2;
+        }
+    }
+    .enter__reg.enter__reg-center {
+        justify-content: center;
+    }
+
+    .enter__row {
+        margin-bottom: 10px;
+
+        .enter__input {
+            position:relative;
+
+            .enter__input-error {
+                position: absolute;
+                top: 50%;
+                left: calc(100% + 12px);
+                display:none;
+                white-space: nowrap;
+                z-index: 9;
+                color: #EB5757;
+                padding: 9px 16px;
+                background: #FFECEC;
+                font-family: Montserrat;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 16px;
+                letter-spacing: 0em;
+                text-align: left;
+                transform: translateY(-50%);
+            }
+
+            .enter__input-error-svg {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                width: 18px;
+                height: 18px;
+                background: url("/local/templates/empty/assets/images/err.svg") 100% 100%;
+                display: none;
+            }
+
+            .enter__checkbox-cont {
+                display: flex;
+                gap: 15px;
+                align-items: start;
+
+                input[type="checkbox"] {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .enter__input.error {
+            border: 1px solid red;
+
+            .enter__input-error {
+                display:block;
+            }
+
+            .enter__input-error-svg{
+                display:block;
+            }
+        }
+    }
+
+    .promoform-inputs .enter__row:last-child {
+        margin-bottom: 0;
+        margin-top: 26px;
+    }
+
+    .enter__error-text {
+        padding: 10px;
+        border: 1px solid red;
+        background: #FFECEC;
+        color: #EB5757;
+        display: none;
+        margin-top: 10px;
+    }
+}
+
+// промоакция оформление заказа
+.basket-promo {
+    margin-bottom: 26px;
+
+    &__checkbox {
+        display: flex;
+        align-items: end;
+        gap: 15px;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #2C2C2C;
+        margin-bottom: 11px;
+    }
+
+    &__max-bonus{
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #929292;
+    }
+
+    .basket-promo__bonus-selector {
+        display: grid;
+        grid-template-columns: 54px auto;
+        gap: 16px;
+
+        input[type="text"] {
+            padding: 0;
+            text-align: center;
+        }
+
+        .basket-promo__bonus-selector-text {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            p {
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #000000;
+            }
+        }
+    }
+}
