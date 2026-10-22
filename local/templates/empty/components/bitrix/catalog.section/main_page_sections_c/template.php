@@ -76,7 +76,10 @@ if($colorID==64){
 }elseif($colorID==66){
 	$color="bg1";
 }
-echo "<pre>Template arResult: "; print_r(Ion\Settings::getSpaceField("UF_COLOR_KHIT", "MAIN")); echo "</pre>";
+elseif($colorID==68){
+	$color="bg5";
+}
+// echo "<pre>Template arResult: "; print_r(Ion\Settings::getSpaceField("UF_COLOR_KHIT", "MAIN")); echo "</pre>";
 
 ?>
 
@@ -234,10 +237,14 @@ foreach ($arResult['ITEMS'] as $item) {
 ?>
 	<div class="row items-list">
 		<!-- items-container -->
-		<?
+		<?$i=0;
 		foreach ($arResult['ITEM_ROWS'] as $rowData) {
 			$rowItems = array_splice($arResult['ITEMS'], 0, $rowData['COUNT']);
 			foreach ($rowItems as $item) {
+
+				if($item["PROPERTIES"]["IS_MAIN"]["VALUE"]== "Да"){
+				$i++;
+				
 				$APPLICATION->IncludeComponent(
 					'bitrix:catalog.item',
 					'catalog',
@@ -258,7 +265,7 @@ foreach ($arResult['ITEMS'] as $item) {
 					$component,
 					array('HIDE_ICONS' => 'Y')
 				);
-			}
+			}if($i>5) break;}
 		}
 		unset($generalParams, $rowItems);
 		?>

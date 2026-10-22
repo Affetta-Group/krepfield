@@ -14,6 +14,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 
 use  Bitrix\Main\Grid\Declension;
+
 ?>
 <div class="catalog-min__inner">
     <?if (!empty($arResult['SECTIONS'])):?>
@@ -25,9 +26,9 @@ use  Bitrix\Main\Grid\Declension;
         </ul>
     </div>
     <?endif;?>
-    <div class="catalog-min__info <?=$arResult["SECTION"]["UF_COLOR"]?>">
+    <div class="catalog-min__info <?if($arResult["SECTION"]["UF_COLOR"]=="67"){echo("bg4");}else{echo($arResult["SECTION"]["UF_COLOR"]);}?>">
         <div class="catalog-min__info-top">
-            <div class="catalog-min__info-top-title"><?= $arResult["SECTION"]["NAME"] ?></div>
+            <div class="catalog-min__info-top-title"><?= $arParams["TITLE"] ? $arParams["TITLE"] : $arResult["SECTION"]["NAME"] ?></div>
             <div class="catalog-min__info-top-nb">
                 <span><?= $arResult["SECTION"]["ELEMENT_CNT"] ?></span> <?= (new Declension('товар', 'товара', 'товаров'))->get($arResult["SECTION"]["ELEMENT_CNT"]) ?>
             </div>
@@ -46,6 +47,7 @@ use  Bitrix\Main\Grid\Declension;
         } else {
             $GLOBALS["arrFilter"] = array(">CATALOG_PRICE_1" => 0);
         }
+  
         $APPLICATION->IncludeComponent(
             "bitrix:catalog.section",
             "main_page_sections",

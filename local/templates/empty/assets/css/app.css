@@ -1487,6 +1487,7 @@ input::placeholder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: flex-end;
 }
 
 .catalog-min__list {
@@ -1540,6 +1541,9 @@ input::placeholder {
 .catalog-min__info.bg3 {
     background: #C78F78;
 }
+.catalog-min__info.bg4{
+    background: #e5c145;
+}
 
 .catalog-min__info-img {
     height: calc(100% - 156px);
@@ -1567,7 +1571,7 @@ input::placeholder {
     align-items: center;
     padding: 5px 28px;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 26px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
