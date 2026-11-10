@@ -183,6 +183,9 @@ CModule::AddAutoloadClasses("", array(
 include_once "debug.php";
 include_once "events.php";
 
+require_once __DIR__ . "/lib/BoxberryExport.php";
+\Krepfield\BoxberryExport::register();
+
 //обновление счета
 EventManager::getInstance()->addEventHandler('sale', 'OnSaleOrderSaved', function ($event) {
     $order = $event->getParameter('ENTITY');
