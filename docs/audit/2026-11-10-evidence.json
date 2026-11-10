@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-10",
+  "commit": "f87046212c33b20158040db7e5f694de104ca68d",
+  "mode": "initial read-only audit snapshot; subsequent authorized Boxberry implementation recorded in session_outcome",
+  "file_comparison": {
+    "compared": 582,
+    "byte_equal": 552,
+    "line_endings_only": 30,
+    "substantive_differences": 0,
+    "scope": "selected project code; excludes vendor/uploads/cache/media and other unscanned files"
+  },
+  "lint": {
+    "php": "local PHP 8.5.4; short_open_tag=1",
+    "checked": 639,
+    "failures": []
+  },
+  "http": {
+    "public_gets": 29,
+    "static_heads": 13,
+    "dev_gets": 2,
+    "archive_head_status": 200,
+    "archive_content_length": 22510996,
+    "archive_downloaded": false
+  },
+  "browser": {
+    "pages": [
+      "home",
+      "catalog",
+      "auth",
+      "empty_cart"
+    ],
+    "widths": [
+      1440,
+      390
+    ],
+    "runs": 8,
+    "unhandled_page_errors": 0,
+    "failed_resource_statuses": 0,
+    "horizontal_overflow": false
+  },
+  "platform": {
+    "bitrix": "26.100.0",
+    "license_expired": "2026-07-28",
+    "php": "8.4.27",
+    "handler": "FastCGI Apache",
+    "mysql": "8.0.25-15",
+    "hosting": "REG.RU VIP-2",
+    "hosting_paid_until": "2027-10-02",
+    "disk_used_gb_approx": 19,
+    "disk_total_gb": 40,
+    "inodes_used": 397483,
+    "inodes_limit": 1000000,
+    "memory_limit": "2048M",
+    "max_execution_time_seconds": 300,
+    "upload_max_filesize": "512M",
+    "post_max_size": "512M",
+    "max_input_vars": 100000,
+    "short_open_tag": true,
+    "php_local_display_errors": false,
+    "php_log_errors": false
+  },
+  "backup": {
+    "hosting_latest_visible": "2026-11-09",
+    "hosting_other_visible": [
+      "2026-11-08",
+      "2026-11-07",
+      "2026-11-06"
+    ],
+    "hosting_stated_retention_days": 30,
+    "bitrix_automatic_enabled": false,
+    "bitrix_latest_local": "2026-04-16",
+    "restore_tested": false
+  },
+  "background": {
+    "hosting_cron_jobs": 3,
+    "bitrix_agents": 72,
+    "agents_on_hits": true,
+    "boxberry_log_bytes": 928390126
+  },
+  "stage": {
+    "domain": "dev.krepfield.ru",
+    "separate_document_root": true,
+    "database_and_external_integration_isolation_verified": false,
+    "public_http_status": 200
+  },
+  "not_executed": [
+    "order creation or payment",
+    "carrier export",
+    "mail or SMS sends",
+    "bonus mutations",
+    "index rebuild",
+    "restore",
+    "load test",
+    "updates",
+    "antivirus scan"
+  ],
+  "not_executed_scope": "initial read-only audit only; later controlled carrier exports are recorded below",
+  "session_outcome": {
+    "implementation_commit": "c9d2dc0",
+    "scope": "Boxberry/Яндекс automatic export only",
+    "broader_remediation_authorized": false,
+    "dev_environment_used": false,
+    "full_local_environment_used": false,
+    "global_flag": true,
+    "per_order_activation_allowlist": false,
+    "vendor_files_or_options_modified": false,
+    "runtime_verified_by_user": [
+      "PHP 8.4.27",
+      "separate database connection",
+      "required table columns",
+      "private storage parent writable",
+      "exactly one legacy switch handler and one saved-order handler"
+    ],
+    "legacy_order_cache_fix": true,
+    "tests": {
+      "stub_parcel_method": 34,
+      "installed_parcel_method_with_stubbed_dependencies": 37,
+      "external_calls_in_tests": false
+    },
+    "order_1623": {
+      "initial_result": "blocked_vendor_payment_snapshot",
+      "carrier_called_before_block": false,
+      "after_cache_fix": "created through explicit guarded console invocation by user",
+      "track": "YA6AF301AFC03C7A2CB",
+      "state_and_module_track_match_confirmed": true
+    },
+    "order_1624": {
+      "automatic_export_observed": true,
+      "request": {
+        "method": "ParselCreate",
+        "price": 222.31,
+        "payment_sum": 0,
+        "delivery_sum": 161.41,
+        "vid": 1
+      },
+      "response_track": "YA6AF3065FFB6B71C35",
+      "log_sample_limit_bytes": 2097152,
+      "customer_confirmed_correct_result": true,
+      "private_state_or_database_track_separately_verified": false
+    },
+    "historical_order_1619_modified": false,
+    "live_concurrent_callbacks_or_api_timeout_tested": false,
+    "separate_filesystem_probe_result_received": false
+  }
+}
